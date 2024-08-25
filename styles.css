@@ -1,0 +1,223 @@
+.poppins-all {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+    background-color: var(--red);
+    background-image: url(images/bg-intro-desktop.png);
+    background-size: 100%;
+    min-height: 100vh;
+    font-family: "Poppins";
+    display: flex;
+    place-content: center;
+}
+
+.container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 100vw;
+    width: 100%;
+}
+
+.desc {
+    color: white;
+    max-width: 35rem;
+    padding-left: .9rem;
+    height: min-content;
+}
+
+.desc h1 {
+    font-size: 3.0rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.desc p {
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+
+.signup {
+    max-width: 35rem;
+    width: 90%;
+}
+
+.trial {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--blue);
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.196);
+    margin-bottom: 2rem;
+}
+
+.trial p {
+    display: inline;
+    font-weight: 700;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.claim {
+    background-color: white;
+    padding: 2rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.196);
+}
+
+.textbox {
+    padding: 1rem;
+    padding-left: 1.8rem;
+    color: rgb(39, 39, 39);
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-color: rgb(221, 219, 219);
+    border-radius: 5px;
+}
+
+.textbox:focus {
+    padding: 1rem;
+    padding-left: 1.8rem;
+    color: rgb(39, 39, 39);
+    font-weight: 600;
+    margin-bottom: 20px;
+    outline: 0.1rem solid;
+    outline-color: var(--dark-blue);
+}
+
+.textbox::placeholder {
+    color: rgb(29, 29, 29);
+}
+
+button {
+    cursor: pointer;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    border: none;
+    background-color: var(--green);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 0px hsl(154, 55%, 44%);
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: hsl(154, 100%, 64%);
+}
+
+.tos {
+    color: var(--grayish-blue);
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+}
+
+.tos data {
+    cursor: pointer;
+    color: var(--red);
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.error {
+    padding: 1rem;
+    padding-left: 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+
+    border: 2px solid hsl(0, 100%, 74%);
+    background: url(images/icon-error.svg) no-repeat;
+    background-position: 95% 50%;
+}
+
+.error-text {
+    text-align: right;
+    color: var(--red);
+    font-style: italic;
+    margin-top: .2rem;
+    font-size: .8em;
+    margin-bottom: .8rem;
+}
+
+.success {
+    padding: 1rem;
+    padding-left: 1.8rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 2px solid var(--green);
+}
+
+@media screen and (max-width: 1169px) {
+    body {
+        background-color: var(--red);
+        background-image: url(images/bg-intro-mobile.png);
+        background-size: 100%;
+    }
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        place-content: center;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+    .desc {
+        text-align: center;
+        margin: 20px;
+        padding-left: 0;
+        margin-top: -50px;
+    }
+    .desc h1 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    .trial {
+        margin-bottom: 20px;
+    }
+    .signup {
+        margin: 20px;
+        margin-top: 10px;
+    }
+}
